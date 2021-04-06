@@ -1,3 +1,14 @@
+
+Running:
+
+> docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app <running_id>
+
+Production:
+> docker run -p 8080:80 <running_id>
+Notes:
+
+The -v /app/node_modules maintains the node_modules folder inside the container.  The -v $(pwd):/app allows us to use the current working directory to edit files outside the container and see the results because the files are mapped into the container.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
